@@ -1,0 +1,26 @@
+title: Your awesome title
+email: sierra.v.moore@gmail.com
+description: ""
+baseurl: "/file_structure"
+url: "https://sierramoore.github.io"
+github_username:  sierramoore
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude: [".idea/"]
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+#  - jekyll-autoprefixer
+
+#autoprefixer:
+#  browsers:
+#  - last 10 versions
