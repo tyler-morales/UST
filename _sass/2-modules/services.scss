@@ -1,0 +1,36 @@
+.services {
+  display: flex;
+  justify-content: space-around;
+}
+.card {
+  background-color: $grey;
+  border: 1px solid #fff;
+  padding: 5px;
+  display: flex;
+  width: 31%;
+
+  &__img {
+    width: 12rem;
+    height: 100%;
+    background-color: $mid-blue;
+    margin-right: 7px;
+  }
+
+  &__content {
+    padding: 5px;
+
+    &__heading {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      //letter-spacing: .5px;
+      margin-bottom: .6rem;
+    }
+
+    &__text {
+
+    }
+  }
+
+}

@@ -1,5 +1,22 @@
 .header {
-  @include absCenter;
-  color: #fff;
-  font-size: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: $orange;
+
+  &__primary {
+    font-size: 8rem;
+    font-weight: 900;
+  }
+
+  &__secondary {
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: 3rem;
+    text-decoration: underline;
+    text-shadow: 2px 2px rgba(#000, .2);
+  }
+
+
 }
+//use boing no branded 747

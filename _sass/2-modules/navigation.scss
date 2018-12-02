@@ -1,0 +1,25 @@
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  //background-image: linear-gradient($dark-blue, rgba($dark-blue, .6));
+  //height: 120%;
+  //-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 34%, 83% 23%, 65% 17%, 35% 17%, 16% 24%, 0 35%, 0 0);
+  //clip-path: polygon(50% 0%, 100% 0, 100% 34%, 83% 23%, 65% 17%, 35% 17%, 16% 24%, 0 35%, 0 0);
+
+  & > * {
+    &:not(last-child) {
+      margin-right: .5rem;
+    }
+  }
+
+  &__item {
+    text-decoration: none;
+    background-color: $white;
+    color: $dark-blue;
+    font-size: 1.6rem;
+    padding: .8rem 2.1rem;
+    border-radius:  0 0 1rem 1rem;
+    //box-shadow: 0 .2rem .1rem .1rem darken($dark-blue, 10%);
+  }
+}
