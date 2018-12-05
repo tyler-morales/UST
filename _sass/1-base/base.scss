@@ -1,3 +1,13 @@
+//@import "/assets/fonts/coda/Coda-Heavy.ttf";
+// {{ site.baseurl }}
+
+@font-face {
+  //font-family: Coda Heavy;
+  //src: url("../../assets/fonts/coda/Coda-Heavy.ttf");
+}
+@import url('https://fonts.googleapis.com/css?family=Play');
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Sarpanch:900');
+
 *,
 *::after,
 *::before{
@@ -33,4 +43,13 @@ body {
   background-image: linear-gradient(rgba($dark-blue, .9), rgba($mid-blue, .5)), url("../../assets/img/plane2.jpg");
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.border {
+  background-image: linear-gradient($dark-blue, rgba($dark-blue, .6));
+  //height: 120%;
+  width: 100%;
+  //-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 28%, 79% 20%, 51% 18%, 24% 20%, 0 26%, 0 0);
+  clip-path: ellipse(100% 300% at 20% 5%);
+  border-bottom: 2px solid #fff;
 }

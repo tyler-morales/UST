@@ -6,8 +6,14 @@
   margin: 5% auto;
   display: flex;
 
+  position: relative;
+
+  animation: width 1s ease-in 0s forwards;
+
   .content {
-    width: 55%;
+    width: 50%;
+    opacity: 0;
+    animation: fadeIn 1s ease-in 1s forwards;
 
     &__header {
       font-size: 2rem;
@@ -15,7 +21,8 @@
       color: #fff;
       text-transform: uppercase;
       background-image: linear-gradient(to right, $mid-blue, $dark-blue);
-      padding: 5px;
+      padding: .8rem .8rem .8rem 1.2rem;
+      margin-left: 1.5rem;
       margin-bottom: 2rem;
     }
 
@@ -24,7 +31,7 @@
       font-weight: 200;
       line-height: 1.3;
       margin-bottom: 2rem;
-      padding: 0 1rem;
+      padding: 0 2rem;
     }
   }
 
@@ -32,5 +39,32 @@
     width: 45%;
     height: 90%;
     background-color: $grey;
+
+    position: absolute;
+    bottom: 0;
+    left: 55%;
+    opacity: 0;
+    animation: fadeIn 1s ease-in 1s forwards;
+  }
+}
+//.animate {
+//  width: 80%;
+//}
+
+@keyframes width {
+  0% {
+    width: 0;
+  }
+  100%{
+    width: 80%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }

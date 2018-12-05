@@ -2,19 +2,34 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: $orange;
+  //color: $orange;
 
   &__primary {
-    font-size: 8rem;
+    font-size: 10rem;
     font-weight: 900;
+    font-family: 'Sarpanch', sans-serif;
+    //text-shadow: 2px 2px rgba(#000, .25);
+    color: transparent;
+    background-image: radial-gradient(orange, $orange, orange);
+    -webkit-background-clip: text;
   }
 
   &__secondary {
+    font-family: 'Cinzel', serif;
     text-transform: capitalize;
     font-weight: 300;
     font-size: 3rem;
     text-decoration: underline;
-    text-shadow: 2px 2px rgba(#000, .2);
+    text-decoration-color: $orange;
+    text-shadow: 2px 2px rgba(#000, .25);
+    z-index: 10;
+    color: transparent;
+    background-image: linear-gradient(to bottom, lighten($orange, 20%), $orange);
+
+
+    //backface-visibility: hidden;
+    //display: inline-block;
+    -webkit-background-clip: text;
   }
 
 
