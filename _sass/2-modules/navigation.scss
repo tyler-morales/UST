@@ -10,12 +10,20 @@
   }
 
   &__item {
-    text-decoration: none;
     background-color: $white;
-    color: $dark-blue;
     font-size: 1.6rem;
-    padding: .8rem 2.1rem;
+    padding: .7rem 2.3rem;
     border-radius:  0 0 1rem 1rem;
     //box-shadow: 0 .2rem .1rem .1rem darken($dark-blue, 10%);
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $dark-blue;
+
+    &:hover,
+    :active {
+      color: $orange;
+    }
   }
 }
