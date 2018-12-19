@@ -9,7 +9,13 @@
 .mb-none {margin-bottom: 0 !important; }
 .mb-btm { margin-bottom: 35% !important; }
 
-.font-sm { font-size: 1.3rem !important; }
+.font-sm {
+  font-size: 1.3rem !important;
+  @include respond(large-phone) {
+    font-size: 1.8rem !important;
+  }
+
+}
 
 .pd-md { padding: 0 7rem !important; }
 

@@ -16,8 +16,13 @@
     border-radius:  0 0 1rem 1rem;
     //box-shadow: 0 .2rem .1rem .1rem darken($dark-blue, 10%);
 
+    @include respond(large-phone) {
+      font-size: 2rem;
+      padding: 1.3rem 2.6rem;
+    }
+
     &--none {
-      @include respond(phone) {
+      @include respond(large-phone) {
         display: none !important;
         //visibility: hidden;
       }

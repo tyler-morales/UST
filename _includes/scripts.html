@@ -1,32 +1,38 @@
 <script>
-    // var main = document.getElementById('main');
-    //
-    // function animate() {
-    //     main.className = main.className + " animate";
-    // }
+    const toggleNavItems = document.getElementsByClassName('nav__item--none');
+
+    const mainImg = document.getElementsByClassName('main__img');
+
+    // const hide1 = document.getElementById("hide1");
+    // const hide2 = document.getElementById("hide2");
+    // const hide3 = document.getElementById("hide3");
+    // hide1.style.display = 'none';
+    // hide2.style.display = 'none';
+    // hide3.style.display = 'none';
+    // hide1.style.display = 'block';
+    // hide2.style.display = 'block';
+    // hide3.style.display = 'block';
 
 
-    // window.addEventListener('load', function(){
-    //     // when rest of page is done loading hide this
-    //     main.style.display = 'none';
-    // });
+    function removeOnMobile (){
+        if(window.innerWidth <= 690) {
 
-    // const toggleNavItems = document.getElementsByClassName('nav__item--none');
-
-    const hide1 = document.getElementById("hide1");
-    const hide2 = document.getElementById("hide2");
-    const hide3 = document.getElementById("hide3");
-
-    window.addEventListener("resize", function(){
-        if(window.innerWidth <= 680) {
-            hide1.style.display = 'none';
-            hide2.style.display = 'none';
-            hide3.style.display = 'none';
+            for(let j=0; j < toggleNavItems.length; j++){
+                toggleNavItems[j].style.display = 'none';
+            }
+            for(let i=0; i < mainImg.length; i++){
+                mainImg[i].style.display = 'none';
+            }
         } else {
-            hide1.style.display = 'block';
-            hide2.style.display = 'block';
-            hide3.style.display = 'block';
+            for(let j=0; j < toggleNavItems.length; j++){
+                toggleNavItems[j].style.display = 'block';
+            }
+
+            for(let i=0; i < mainImg.length; i++){
+                mainImg.style.display = 'block';
+            }
         }
-    });
+    };
+    removeOnMobile();
 </script>
 
