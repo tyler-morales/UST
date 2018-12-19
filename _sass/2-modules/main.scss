@@ -10,11 +10,28 @@
 
   animation: width .1s ease-in 0s forwards;
 
+  @include respond(col) {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    min-height: 55rem;
+    padding: 1rem;
+
+    & > * {
+      align-self: center;
+    }
+  }
+
   .content {
     width: 50%;
     opacity: 0;
     margin-right: 2rem;
     animation: fadeIn .1s ease-in .1s forwards;
+
+    @include respond(col) {
+      width: 80%;
+      margin: 2rem auto;
+    }
 
     &__container {
 
@@ -51,7 +68,7 @@
       }
 
       &__text {
-        font-size: 2.3rem;
+        font-size: 2.1rem;
         font-weight: 300;
         line-height: 1.5;
       }
@@ -125,6 +142,9 @@
       height: 75%;
       align-self: center;
       border: 2px solid #fff;
+
+      min-width: 20rem;
+      min-height: 20rem;
     }
     &--4 {
       background-image: url("../img/faa-logo.png");
@@ -148,10 +168,6 @@
     border: 1px solid $dark-grey;
     outline: none;
     background: transparent;
-
-    &:placeholder-shown, ::placeholder, ::-webkit-input-placeholder {
-      color: black !important;
-    }
   }
 
   input {
@@ -159,9 +175,6 @@
     border: 1px solid $dark-grey;
     padding: .5rem 1rem;
 
-    &:placeholder-shown, ::placeholder, ::-webkit-input-placeholder {
-      color: #000;
-    }
     &:focus {
       outline: none;
       box-shadow: 0 1.5rem 2rem rgba($dark-blue, .15);

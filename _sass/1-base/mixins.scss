@@ -9,6 +9,9 @@
   @if $breakpoint == small-phone {
     @media (max-width: 25em) { @content } //320px
   }
+  @if $breakpoint == md-phone {
+    @media (max-width: 440px) { @content } //440px
+  }
   @if $breakpoint == mid-phone {
     @media (max-width: 31.25em) { @content } //500px
   }
@@ -18,8 +21,11 @@
   @if $breakpoint == large-phone {
     @media (max-width: 43.125em) { @content } //690px
   }
-  @if $breakpoint == ipad {
-    @media (max-width: 48em) { @content } //768px
+  @if $breakpoint == col-header {
+    @media (max-width: 700px) { @content } //700px
+  }
+  @if $breakpoint == col {
+    @media (max-width: 800px) { @content } //800px
   }
   @if $breakpoint == tab-port {
     @media (max-width: 56em) { @content } //900px

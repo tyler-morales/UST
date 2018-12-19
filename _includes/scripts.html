@@ -10,5 +10,23 @@
     //     // when rest of page is done loading hide this
     //     main.style.display = 'none';
     // });
+
+    // const toggleNavItems = document.getElementsByClassName('nav__item--none');
+
+    const hide1 = document.getElementById("hide1");
+    const hide2 = document.getElementById("hide2");
+    const hide3 = document.getElementById("hide3");
+
+    window.addEventListener("resize", function(){
+        if(window.innerWidth <= 680) {
+            hide1.style.display = 'none';
+            hide2.style.display = 'none';
+            hide3.style.display = 'none';
+        } else {
+            hide1.style.display = 'block';
+            hide2.style.display = 'block';
+            hide3.style.display = 'block';
+        }
+    });
 </script>
 
