@@ -2,6 +2,11 @@
   display: flex;
   justify-content: space-around;
   position: relative;
+
+  @include respond(laptop2) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .card {
   text-decoration: none;
@@ -10,6 +15,12 @@
   padding: 5px;
   display: flex;
   width: 31%;
+  min-width: 31rem;
+
+  @include respond(laptop2) {
+    width: 50%;
+    margin-bottom: 2.5rem;
+  }
 
   &__img {
     width: 12rem;
@@ -29,10 +40,11 @@
       text-transform: uppercase;
       //letter-spacing: .5px;
       margin-bottom: .6rem;
+      text-shadow: 1px 1px rgba(#000, .25);
     }
 
     &__text {
-
+      font-size: 1.4rem;
     }
   }
 

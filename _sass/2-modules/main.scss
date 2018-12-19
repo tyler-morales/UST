@@ -8,13 +8,13 @@
 
   position: relative;
 
-  animation: width 1s ease-in 0s forwards;
+  animation: width .1s ease-in 0s forwards;
 
   .content {
     width: 50%;
     opacity: 0;
     margin-right: 2rem;
-    animation: fadeIn 1s ease-in 1s forwards;
+    animation: fadeIn .1s ease-in .1s forwards;
 
     &__container {
 
@@ -37,6 +37,24 @@
       line-height: 1.3;
       margin-bottom: 2rem;
       padding: 0 2rem;
+    }
+
+    &__contact {
+
+
+      &__header {
+        font-size: 2.4rem;
+        text-shadow: 2px 2px rgba(#000, .25);
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 2.3rem;
+      }
+
+      &__text {
+        font-size: 2.3rem;
+        font-weight: 300;
+        line-height: 1.5;
+      }
     }
 
     &__resume {
@@ -115,9 +133,46 @@
     }
   }
 }
-//.animate {
-//  width: 80%;
-//}
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 5rem 5rem 10rem;
+
+  & > * {
+    margin-bottom: .8rem;
+  }
+  textarea, &__msg {
+    height: 15rem;
+    padding: 1rem;
+
+    border: 1px solid $dark-grey;
+    outline: none;
+    background: transparent;
+
+    &:placeholder-shown, ::placeholder, ::-webkit-input-placeholder {
+      color: black !important;
+    }
+  }
+
+  input {
+    background: transparent;
+    border: 1px solid $dark-grey;
+    padding: .5rem 1rem;
+
+    &:placeholder-shown, ::placeholder, ::-webkit-input-placeholder {
+      color: #000;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0 1.5rem 2rem rgba($dark-blue, .15);
+    }
+  }
+  input::placeholder, textarea::placeholder {
+    color: #1a1a1a;
+  }
+}
+
+
 
 @keyframes width {
   0% {

@@ -37,6 +37,7 @@ body {
 }
 
 .container {
+  //min-width: 110rem;
   width: 80vw;
   min-height: 85vh;
   max-height: 1100px;
@@ -45,6 +46,14 @@ body {
   background-position: center;
   max-width: 1000px;
   margin: 0 auto;
+
+  @media screen and (min-width: 1061px) {
+    min-width: 115rem;
+  }
+
+  @include respond(laptop2) {
+    width: 100vw;
+  }
 }
 
 .border {

@@ -15,6 +15,13 @@
     padding: .7rem 2.3rem;
     border-radius:  0 0 1rem 1rem;
     //box-shadow: 0 .2rem .1rem .1rem darken($dark-blue, 10%);
+
+    &--none {
+      @include respond(phone) {
+        display: none !important;
+        //visibility: hidden;
+      }
+    }
   }
 
   &__link {
