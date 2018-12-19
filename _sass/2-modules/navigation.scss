@@ -22,7 +22,7 @@
     }
 
     &--none {
-      @include respond(large-phone) {
+      @include respond(col-header) {
         display: none !important;
         //visibility: hidden;
       }

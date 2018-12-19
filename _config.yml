@@ -2,7 +2,7 @@ title: UST
 email: sierra.v.moore@gmail.com
 description: ""
 baseurl: "/ust"
-url: "https://sierramoore.github.io"
+url: "https://sierramoore.github.io/ust"
 github_username:  sierramoore
 
 sass:
@@ -24,3 +24,4 @@ plugins:
 #autoprefixer:
 #  browsers:
 #  - last 10 versions
+
