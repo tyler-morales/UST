@@ -1,4 +1,13 @@
 <script>
+    // window.addEventListener('load', function(){
+    //     // when rest of page is done loading hide this
+    //     // overlay.style.display = 'none';
+    // });
+    //
+    // window.onload = function() {
+    //     // alert('Page loaded');
+    // };
+
     const toggleNavItems = document.getElementsByClassName('nav__item--none');
 
     const mainImg = document.getElementsByClassName('main__img');
@@ -34,23 +43,5 @@
         }
     };
     removeOnMobile();
-
-    if(window.innerWidth <= 690) {
-
-        for(let j=0; j < toggleNavItems.length; j++){
-            toggleNavItems[j].style.display = 'none';
-        }
-        for(let i=0; i < mainImg.length; i++){
-            mainImg[i].style.display = 'none';
-        }
-    } else {
-        for(let j=0; j < toggleNavItems.length; j++){
-            toggleNavItems[j].style.display = 'block';
-        }
-
-        for(let i=0; i < mainImg.length; i++){
-            mainImg.style.display = 'block';
-        }
-    }
 </script>
 

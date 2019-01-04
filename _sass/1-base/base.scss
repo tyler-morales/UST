@@ -17,7 +17,8 @@
 }
 
 html {
-  font-size: 62.5%;
+  //font-size: 62.5%;
+  font-size: 56.25%;
 
   @include respond(tab-land) {  // width < 1200?
     font-size: 56.25%;
@@ -39,12 +40,13 @@ body {
 
 .container {
   width: 80vw;
+  //height: 85vh;
   min-height: 85vh;
   max-height: 1100px;
   background-image: linear-gradient(rgba($dark-blue, .9), rgba($mid-blue, .5)), url("../../assets/img/plane2.jpg");
   background-size: cover;
   background-position: center;
-  //max-width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
 
   @media screen and (min-width: 1061px) {

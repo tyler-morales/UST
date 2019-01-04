@@ -1,3 +1,9 @@
+.welcome-animation {
+  animation: width .6s ease-in 0s forwards;
+}
+.welcome-content-animation {
+  animation: fadeIn .22s ease-in .6s forwards;
+}
 .main {
   width: 80%;
   height: 35rem;
@@ -7,8 +13,6 @@
   display: flex;
 
   position: relative;
-
-  animation: width .1s ease-in 0s forwards;
 
   @include respond(col) {
     flex-direction: column;
@@ -26,7 +30,7 @@
     width: 50%;
     opacity: 0;
     margin-right: 2rem;
-    animation: fadeIn .1s ease-in .1s forwards;
+    //animation: fadeIn .1s ease-in .1s forwards;
 
     @include respond(col) {
       width: 80%;
@@ -174,6 +178,7 @@
   }
 }
 .form {
+  font-family: sans-serif;
   display: flex;
   flex-direction: column;
   padding: 5rem 5rem 5rem 10rem;
@@ -186,6 +191,7 @@
     margin-bottom: .8rem;
   }
   textarea, &__msg {
+    font-family: sans-serif;
     height: 15rem;
     padding: 1rem;
 
