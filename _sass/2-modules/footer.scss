@@ -1,13 +1,8 @@
 .footer {
   display: flex;
-  //justify-content: space-between;
   justify-content: center;
   color: #fff;
   font-size: 1.2rem;
   margin: 2%;
   padding: 1.5rem;
-
-  &__text {
-    text-decoration: underline;
-  }
 }

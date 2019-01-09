@@ -4,11 +4,16 @@
   align-items: center;
   //color: $orange;
 
+  &__logo {
+    width: 22rem;
+    height: auto;
+  }
+
   &__primary {
     font-size: 10rem;
     font-weight: 900;
-    font-family: 'Sarpanch', sans-serif;
-    //text-shadow: 2px 2px rgba(#000, .25);
+    font-family: 'Teko', sans-serif;
+    text-shadow: 2px 2px rgba(orange, .02);
     color: transparent;
     background-image: radial-gradient(orange, $orange, orange);
     -webkit-background-clip: text;

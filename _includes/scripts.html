@@ -7,21 +7,13 @@
     // window.onload = function() {
     //     // alert('Page loaded');
     // };
+    const d = new Date();
+    const year = d.getFullYear();
+    document.getElementById('js-year').innerText = year;
 
     const toggleNavItems = document.getElementsByClassName('nav__item--none');
 
     const mainImg = document.getElementsByClassName('main__img');
-
-    // const hide1 = document.getElementById("hide1");
-    // const hide2 = document.getElementById("hide2");
-    // const hide3 = document.getElementById("hide3");
-    // hide1.style.display = 'none';
-    // hide2.style.display = 'none';
-    // hide3.style.display = 'none';
-    // hide1.style.display = 'block';
-    // hide2.style.display = 'block';
-    // hide3.style.display = 'block';
-
 
     function removeOnMobile (){
         if(window.innerWidth <= 690) {

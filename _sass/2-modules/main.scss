@@ -2,6 +2,7 @@
   animation: width .6s ease-in 0s forwards;
 }
 .welcome-content-animation {
+  opacity: 0;
   animation: fadeIn .22s ease-in .6s forwards;
 }
 .main {
@@ -28,7 +29,6 @@
 
   .content {
     width: 50%;
-    opacity: 0;
     margin-right: 2rem;
     //animation: fadeIn .1s ease-in .1s forwards;
 
@@ -88,6 +88,17 @@
       color: #912C26;
       text-decoration: none;
       padding: 0 3rem;
+
+      &--or {
+        @extend .content__resume;
+        color: #000;
+        margin: 1rem 0;
+      }
+    }
+
+    &__upload {
+      //display: block;
+      margin-left: 3rem;
     }
 
     &__list {
@@ -144,18 +155,30 @@
 
   &__img {
     opacity: 0;
-    animation: fadeIn 1s ease-in 1s forwards;
+    animation: fadeIn .2s ease-in forwards;
 
     @include respond(large-phone) {
       display: none;
     }
 
     &--1 {
-
+      background-image: url("../img/plane3.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 45%;
+      height: 75%;
+      align-self: center;
+      animation: fadeIn .2s ease-in .7s forwards;
+    }
+    &--12 {
+      @extend .main__img--1;
+      animation: fadeIn .2s ease-in forwards;
     }
 
     &--2 {
-
+      background-image: url("../img/faa-logo.png");
+      width: 5rem;
+      height: auto;
     }
 
     &--3 {
@@ -171,9 +194,21 @@
       min-height: 20rem;
     }
     &--4 {
-      background-image: url("../img/faa-logo.png");
-      width: 5rem;
+      background-image: url("../img/plane-engine.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 45%;
+      height: 75%;
+      align-self: center;
+    }
+    &--5 {
+      background-image: url("../img/workers2.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 45%;
+      min-height: 85%;
       height: auto;
+      align-self: center;
     }
   }
 }
@@ -182,6 +217,8 @@
   display: flex;
   flex-direction: column;
   padding: 5rem 5rem 5rem 10rem;
+
+  width: 33.3333%;
 
   @include respond(large-phone) {
     padding: 0;
@@ -203,7 +240,7 @@
   input {
     background: transparent;
     border: 1px solid $dark-grey;
-    padding: .5rem 1rem;
+    padding: .5rem 1.3rem;
 
     &:focus {
       outline: none;
