@@ -12,16 +12,27 @@
         </p>
     </section>
 
-    <div class="form">
+    <form name="contact" class="form">
         <h3 class="content__contact__header mg-top-md">Contact Form</h3>
-        <input type="text" placeholder="Your Name:">
-        <input type="text" placeholder="Your Email:">
-        <!--<input type="text" placeholder="Message:" class="form__msg">-->
-        <textarea placeholder="Message:" rows="3" cols="28" class="form__msg" role="textbox"></textarea>
 
+        <input name="name" type="text" placeholder="Your Name:">
+        <input name="email" type="text" placeholder="Your Email:">
+        <textarea name="message" placeholder="Message:" rows="3" cols="28" class="form__msg" role="textbox"></textarea>
         <div class="flex">
-            <button class="btn">Clear</button>
-            <button class="btn">Send</button>
+            <button class="btn" type="reset">Clear</button>
+            <button class="btn" type="submit">Send</button>
         </div>
-    </div>
+    </form>
+
+    <script async>
+        // contact form to google spreadsheet //
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwNQcZb7oCJbopDGjvTKn-w5qzv01DonRWlhM6jlpDkBQaJVJi9/exec";
+        const form = document.forms['contact'];
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        });
+    </script>
 </main>

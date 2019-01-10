@@ -38,7 +38,7 @@ body {
   overflow-x: hidden;
 }
 
-@include respond(col-header) {
+@include respond(laptop) {
   body::after {
     content: "";
     position: fixed;
@@ -48,10 +48,8 @@ body {
     background: linear-gradient(rgba($dark-blue, .9), rgba($mid-blue, .5)), url("../../assets/img/plane2.jpg") no-repeat 50% 50%;
     background-size: cover;
 
-    width: 80vw;
-    max-width: 1000px;
-    min-height: 85vh;
-    max-height: 1100px;
+    width: 100vw;
+    min-height: 100vh;
     background-position: center;
   }
 }
@@ -72,6 +70,9 @@ body {
 
   @include respond(laptop2) {
     width: 100vw;
+  }
+  @include respond(laptop) {
+    background-image: none;
   }
 }
 
