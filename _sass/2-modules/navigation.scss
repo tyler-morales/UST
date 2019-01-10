@@ -20,6 +20,9 @@
       font-size: 2rem;
       padding: 1.1rem 2.5rem;
     }
+    @include respond(sm-phone) {
+      padding: .9rem 2.2rem;
+    }
 
     &--none {
       @include respond(col-header) {

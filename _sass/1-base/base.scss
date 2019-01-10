@@ -10,7 +10,7 @@
 
 *,
 *::after,
-*::before{
+*::before, body, html{
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -38,9 +38,26 @@ body {
   overflow-x: hidden;
 }
 
+@include respond(col-header) {
+  body::after {
+    content: "";
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    z-index: -3;
+    display: block;
+    background: linear-gradient(rgba($dark-blue, .9), rgba($mid-blue, .5)), url("../../assets/img/plane2.jpg") no-repeat 50% 50%;
+    background-size: cover;
+
+    width: 80vw;
+    max-width: 1000px;
+    min-height: 85vh;
+    max-height: 1100px;
+    background-position: center;
+  }
+}
+
 .container {
   width: 80vw;
-  //height: 85vh;
   min-height: 85vh;
   max-height: 1100px;
   background-image: linear-gradient(rgba($dark-blue, .9), rgba($mid-blue, .5)), url("../../assets/img/plane2.jpg");
@@ -66,4 +83,37 @@ body {
   //-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 28%, 79% 20%, 51% 18%, 24% 20%, 0 26%, 0 0);
   //clip-path: ellipse(100% 300% at 20% 5%);
   border-bottom: 2px solid #fff;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 1rem auto; //center imgs for > 635px
+}
+.logo__img {
+  background-position: center;
+  background-size: cover;
+  width: 8rem;
+  height: auto;
+  margin: 1rem 2rem 1rem 0;
+
+  &--1 {
+    //margin-right: 2rem;
+  }
+  &--2 {
+    width: 12rem;
+  }
+
+  @include respond(md-phone) {
+    //margin: 1rem auto;
+    width: 6rem;
+    &--2 {
+      width: 9rem;
+    }
+  }
+
+}
+figure figcaption {
+  text-align: center;
 }

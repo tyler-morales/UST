@@ -9,6 +9,9 @@
   @if $breakpoint == small-phone {
     @media (max-width: 25em) { @content } //320px
   }
+  @if $breakpoint == sm-phone {
+    @media (max-width: 350px) { @content } //320px
+  }
   @if $breakpoint == md-phone {
     @media (max-width: 440px) { @content } //440px
   }

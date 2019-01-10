@@ -23,7 +23,12 @@
 
 }
 
-.pd-md { padding: 0 7rem !important; }
+.pd-md {
+  padding: 0 6rem !important;
+  @include respond(mid-phone) {
+    padding: 0 4rem !important;
+  }
+}
 
 .pd-btm-lg {
   padding-bottom: 5rem !important;

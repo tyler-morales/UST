@@ -5,4 +5,8 @@
   font-size: 1.2rem;
   margin: 2%;
   padding: 1.5rem;
+
+  @include respond(laptop2) {
+    margin: 0;
+  }
 }
