@@ -23,16 +23,16 @@
             <button class="btn" type="submit">Send</button>
         </div>
     </form>
-
-    <script async>
-        // contact form to google spreadsheet //
-        const scriptURL = "https://script.google.com/macros/s/AKfycbwNQcZb7oCJbopDGjvTKn-w5qzv01DonRWlhM6jlpDkBQaJVJi9/exec";
-        const form = document.forms['contact'];
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => console.log('Success!', response))
-                .catch(error => console.error('Error!', error.message))
-        });
-    </script>
 </main>
+
+<script async>
+    // contact form to google spreadsheet //
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwDKgmyqMAoD0dA-yXZ8-m4gtG5VmjkyCegMCn3nN4aoUqJDwM/exec";
+    const form = document.forms['contact'];
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+    });
+</script>
