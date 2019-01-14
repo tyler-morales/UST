@@ -28,6 +28,8 @@
     }
   }
   &--technicians {
+    padding: 4rem;
+
     @media screen and (max-width: 900px) {
       flex-direction: column;
       justify-content: center;
@@ -69,7 +71,7 @@
     &__container {
       display: flex;
       //justify-content: space-around;
-      align-items: flex-start;
+      //align-items: flex-start;
 
       @media screen and (max-width: 635px) {
         flex-direction: column;

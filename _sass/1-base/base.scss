@@ -86,14 +86,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin: 1rem auto; //center imgs for > 635px
+  //margin: 0 auto; //center imgs for > 635px
 }
 .logo__img {
   background-position: center;
   background-size: cover;
   width: 8rem;
   height: auto;
-  margin: 1rem 2rem 1rem 0;
+  margin-top: 1rem;
 
   &--1 {
     //margin-right: 2rem;
@@ -105,12 +105,17 @@ body {
   @include respond(md-phone) {
     //margin: 1rem auto;
     width: 6rem;
+
     &--2 {
       width: 9rem;
     }
   }
 
+
+
+
 }
 figure figcaption {
+  font-size: 1.3rem;
   text-align: center;
 }
