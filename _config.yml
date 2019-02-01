@@ -1,9 +1,10 @@
 title: UST
-email: sierra.v.moore@gmail.com
+email: office@ustaviation.com
 description: ""
 baseurl: "/ust"
-url: "https://sierramoore.github.io/ust"
-github_username:  sierramoore
+url: http://ustaviation.com
+repositoty: https://github.com/sierramoore/ust
+
 
 sass:
   sass_dir: _sass
