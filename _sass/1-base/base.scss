@@ -85,19 +85,16 @@ body {
 .img-container {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   //margin: 0 auto; //center imgs for > 635px
 }
 .logo__img {
   background-position: center;
   background-size: cover;
-  width: 8rem;
+  width: 6.5rem;
   height: auto;
-  margin-top: 1rem;
+  margin-top: .4rem;
 
-  &--1 {
-    //margin-right: 2rem;
-  }
   &--2 {
     width: 12rem;
   }
@@ -116,6 +113,6 @@ body {
 
 }
 figure figcaption {
-  font-size: 1.3rem;
+  //font-size: 1.2rem;
   text-align: center;
 }

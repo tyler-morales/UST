@@ -28,7 +28,7 @@
     }
   }
   &--technicians {
-    padding: 4rem;
+    //padding: 4rem;
 
     @media screen and (max-width: 900px) {
       flex-direction: column;
@@ -122,9 +122,22 @@
       font-family: sans-serif;
       font-size: 1.6rem;
       font-weight: 200;
-      color: #912C26;
+      //color: #912C26;
+      color: #000;
       text-decoration: none;
-      padding: 0 3rem;
+      padding: 1.25rem 2rem;
+
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      transition: transform .3s;
+
+      &:active,
+      &:focus {
+        transform: translateY(.4rem);
+      }
 
       &--or {
         @extend .content__resume;
@@ -201,6 +214,7 @@
 
     min-width: 20rem;
     min-height: 27rem;
+    border: 2px solid #fff;
 
     @include respond(col) {
       display: none;
@@ -233,7 +247,6 @@
       width: 45%;
       height: 75%;
       align-self: center;
-      border: 2px solid #fff;
     }
     &--4 {
       background-image: url("../img/plane-engine.jpg");

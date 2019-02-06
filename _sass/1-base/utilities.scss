@@ -5,8 +5,8 @@
 .flex-center {
   display: flex;
   flex-direction: column;
-  //justify-content: flex-end;
-  //align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 //.mg-top-md { margin-top: 3rem !important;}
@@ -22,6 +22,8 @@
   }
 
 }
+
+.u-min-height {min-height: auto !important;}
 
 .pd-md {
   padding: 0 6rem !important;

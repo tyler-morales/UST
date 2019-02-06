@@ -1,8 +1,12 @@
+# General
+
+highlighter : rouge
+
 title: UST
 email: office@ustaviation.com
-description: ""
-baseurl: ""
-url: http://ustaviation.com
+description: "ust, aviation, taxi tech, mayank tripathi, far 145 certified, aircraft, aircraft maintenance, staffing to airlines"
+baseurl: https://ustaviation.com
+url: https://ustaviation.com
 repositoty: https://github.com/sierramoore/ust
 
 
@@ -26,3 +30,5 @@ autoprefixer:
   browsers:
   - last 10 versions
 
+
+permalink   : /:categories/:title/
