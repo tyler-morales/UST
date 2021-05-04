@@ -47,6 +47,32 @@
   // submit form on button submit
   form.addEventListener('submit', (e) => {
     e.preventDefault()
+    sending()
+
+    async function fetchData() {
+      try {
+        // fetch google sheet script data & add submit form
+        let res = await fetch(scriptURL, {
+          method: 'POST',
+          body: new FormData(form),
+        })
+
+        // succesful submission
+        console.log('Success!', res)
+        messagSent(e)
+
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`)
+        }
+
+        // not succesful submission
+      } catch (e) {
+        console.error('Error!', e.message)
+      }
+    }
+    fetchData()
+
+    /*
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
       .then((response) => {
         console.log('Success!', response)
@@ -55,13 +81,20 @@
       .catch((error) => {
         console.error('Error!', error.message)
       })
+      */
   })
+
+  const sending = () => {
+    const button = document.getElementById('submit-button')
+    button.innerText = 'Sending'
+    button.style.cursor = 'wait'
+  }
 
   // Reset form fields
   const messagSent = (e) => {
     const button = document.getElementById('submit-button')
-    button.innerText = 'Message Sent'
     form.reset()
+    button.innerText = 'Message Sent'
     button.disabled = e
     button.style.cursor = 'not-allowed'
   }
