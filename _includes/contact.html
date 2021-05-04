@@ -1,38 +1,49 @@
 <main class="main" id="main">
-    <section class="content">
-        <h3 class="content__header mb-md">Contact</h3>
+  <section class="content">
+    <h3 class="content__header mb-md">Contact</h3>
 
-        <h3 class="content__contact__header pd-md">Information</h3>
-        <p class="content__contact__text pd-md">
-            Office: <br>
-            168 Touhy Court <br>
-            Des Plaines, IL 60018 <br>
-            T: 847.299.8444 <br>
-            Email: office@ustaviation.com
-        </p>
-    </section>
+    <h3 class="content__contact__header pd-md">Information</h3>
+    <p class="content__contact__text pd-md">
+      Office: <br />
+      168 Touhy Court <br />
+      Des Plaines, IL 60018 <br />
+      T: 847.299.8444 <br />
+      Email: office@ustaviation.com
+    </p>
+  </section>
 
-    <form name="contact" class="form">
-        <h3 class="content__contact__header mg-top-md">Contact Form</h3>
+  <form name="submit-to-google-sheet" class="form">
+    <h3 class="content__contact__header mg-top-md">Contact Form</h3>
 
-        <input name="name" type="text" placeholder="Your Name:">
-        <input name="email" type="text" placeholder="Your Email:">
-        <textarea name="message" placeholder="Message:" rows="3" cols="28" class="form__msg" role="textbox"></textarea>
-        <div class="flex">
-            <button class="btn" type="reset">Clear</button>
-            <button class="btn" type="submit">Send</button>
-        </div>
-    </form>
+    <input name="name" type="text" placeholder="Your Name:" />
+    <input name="email" type="text" placeholder="Your Email:" />
+    <textarea
+      name="message"
+      placeholder="Message:"
+      rows="3"
+      cols="28"
+      class="form__msg"
+      role="textbox"
+    ></textarea>
+    <div class="flex">
+      <button class="btn" type="reset">Clear</button>
+      <button class="btn" type="submit">!!!</button>
+    </div>
+  </form>
 </main>
 
 <script async>
-    // contact form to google spreadsheet //
-    const scriptURL = "https://script.google.com/macros/s/AKfycbwDKgmyqMAoD0dA-yXZ8-m4gtG5VmjkyCegMCn3nN4aoUqJDwM/exec";
-    const form = document.forms['contact'];
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-    });
+  // contact form to google spreadsheet
+
+  const scriptURL =
+    'https://script.google.com/macros/s/AKfycbzppBXOpuspjGsn4IwrQ4q650n7gNzV1akN5tJCusUEsVaodYEAlZCo4EHqn9QXk7j9/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const formEl = document.getElementsByClassName('form')
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then((response) => console.log('Success!', response))
+      .catch((error) => console.error('Error!', error.message))
+  })
 </script>
