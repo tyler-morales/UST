@@ -27,7 +27,7 @@
     ></textarea>
     <div class="flex">
       <button class="btn" type="reset">Clear</button>
-      <button class="btn" type="submit">!!!</button>
+      <button id="submit-button" class="btn" type="submit">Send</button>
     </div>
   </form>
 </main>
@@ -43,12 +43,26 @@
   const scriptURL =
     'https://script.google.com/macros/s/AKfycbzppBXOpuspjGsn4IwrQ4q650n7gNzV1akN5tJCusUEsVaodYEAlZCo4EHqn9QXk7j9/exec'
   const form = document.forms['submit-to-google-sheet']
-  const formEl = document.getElementsByClassName('form')
 
+  // submit form on button submit
   form.addEventListener('submit', (e) => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then((response) => console.log('Success!', response))
-      .catch((error) => console.error('Error!', error.message))
+      .then((response) => {
+        console.log('Success!', response)
+        messagSent(e)
+      })
+      .catch((error) => {
+        console.error('Error!', error.message)
+      })
   })
+
+  // Reset form fields
+  const messagSent = (e) => {
+    const button = document.getElementById('submit-button')
+    button.innerText = 'Message Sent'
+    form.reset()
+    button.disabled = e
+    button.style.cursor = 'not-allowed'
+  }
 </script>
