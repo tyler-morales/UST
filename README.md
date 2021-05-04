@@ -1,2 +1,3 @@
-### File structure
-###### This is a basic reusable file structure for jekyll based websites. Created for the purpose of starting new projects quickly.
+# UST Aviation
+## Setup
+Run `bundle exec jekyll serve` to serve the site locally
