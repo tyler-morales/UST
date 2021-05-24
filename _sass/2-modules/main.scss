@@ -1,14 +1,14 @@
 .welcome-animation {
-  animation: width .6s ease-in 0s forwards;
+  animation: width 0.6s ease-in 0s forwards;
 }
 .welcome-content-animation {
   opacity: 0;
-  animation: fadeIn .22s ease-in .6s forwards;
+  animation: fadeIn 0.22s ease-in 0.6s forwards;
 }
 .main {
   width: 80%;
   height: 35rem;
-  background-color: rgba(#fff, .6);
+  background-color: rgba(#fff, 0.6);
   padding: 2rem;
   margin: 5% auto;
   display: flex;
@@ -84,7 +84,7 @@
       color: #fff;
       text-transform: uppercase;
       background-image: linear-gradient(to right, $mid-blue, $dark-blue);
-      padding: .8rem .8rem .8rem 1.2rem;
+      padding: 0.8rem 0.8rem 0.8rem 1.2rem;
       margin-left: 1.5rem;
       margin-bottom: 2rem;
     }
@@ -102,10 +102,9 @@
     }
 
     &__contact {
-
       &__header {
         font-size: 2.4rem;
-        text-shadow: 2px 2px rgba(#000, .25);
+        text-shadow: 2px 2px rgba(#000, 0.25);
         text-transform: uppercase;
         color: #fff;
         margin-bottom: 2.3rem;
@@ -132,11 +131,11 @@
       justify-content: center;
       align-content: center;
       align-items: center;
-      transition: transform .3s;
+      transition: transform 0.3s;
 
       &:active,
       &:focus {
-        transform: translateY(.4rem);
+        transform: translateY(0.4rem);
       }
 
       &--or {
@@ -178,9 +177,9 @@
         }
 
         & > * {
-          margin-bottom: .3rem;
+          margin-bottom: 0.3rem;
           @include respond(large-phone) {
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
           }
         }
       }
@@ -210,7 +209,7 @@
 
   &__img {
     opacity: 0;
-    animation: fadeIn .2s ease-in forwards;
+    animation: fadeIn 0.2s ease-in forwards;
 
     min-width: 20rem;
     min-height: 27rem;
@@ -221,27 +220,27 @@
     }
 
     &--1 {
-      background-image: url("../img/plane3.jpg");
+      background-image: url('../img/plane3.jpg');
       background-position: center;
       background-size: cover;
       width: 45%;
       height: 80%;
       align-self: center;
-      animation: fadeIn .2s ease-in .7s forwards;
+      animation: fadeIn 0.2s ease-in 0.7s forwards;
     }
     &--12 {
       @extend .main__img--1;
-      animation: fadeIn .2s ease-in forwards;
+      animation: fadeIn 0.2s ease-in forwards;
     }
 
     &--2 {
-      background-image: url("../img/faa-logo.png");
+      background-image: url('../img/faa-logo.png');
       width: 5rem;
       height: auto;
     }
 
     &--3 {
-      background-image: url("../img/plane-1-lg.png");
+      background-image: url('../img/plane-1-lg.png');
       background-position: center;
       background-size: cover;
       width: 45%;
@@ -249,7 +248,7 @@
       align-self: center;
     }
     &--4 {
-      background-image: url("../img/plane-engine.jpg");
+      background-image: url('../img/plane-engine.jpeg');
       background-position: center;
       background-size: cover;
       width: 45%;
@@ -261,7 +260,7 @@
       }
     }
     &--5 {
-      background-image: url("../img/workers2.jpg");
+      background-image: url('../img/workers2.jpg');
       background-position: center;
       background-size: cover;
       width: 45%;
@@ -288,9 +287,10 @@
   }
 
   & > * {
-    margin-bottom: .8rem;
+    margin-bottom: 0.8rem;
   }
-  textarea, &__msg {
+  textarea,
+  &__msg {
     font-family: sans-serif;
     height: 15rem;
     padding: 1rem;
@@ -303,25 +303,24 @@
   input {
     background: transparent;
     border: 1px solid $dark-grey;
-    padding: .5rem 1.3rem;
+    padding: 0.5rem 1.3rem;
 
     &:focus {
       outline: none;
-      box-shadow: 0 1.5rem 2rem rgba($dark-blue, .15);
+      box-shadow: 0 1.5rem 2rem rgba($dark-blue, 0.15);
     }
   }
-  input::placeholder, textarea::placeholder {
+  input::placeholder,
+  textarea::placeholder {
     color: #1a1a1a;
   }
 }
-
-
 
 @keyframes width {
   0% {
     width: 0;
   }
-  100%{
+  100% {
     width: 80%;
   }
 }
@@ -330,7 +329,7 @@
   0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
