@@ -21,7 +21,7 @@
   min-height: 100%;
 
   @include respond(laptop2) {
-    width: 66%;
+    width: 80%;
     margin-bottom: 2.5rem;
   }
   @media screen and (max-width: 645px) {
@@ -29,7 +29,7 @@
   }
 
   &__img {
-    width: 45%;
+    // width: 45%;
     height: auto;
     max-height: 11rem;
     background-color: $mid-blue;
