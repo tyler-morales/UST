@@ -215,16 +215,18 @@
     min-height: 27rem;
     border: 2px solid #fff;
 
+    width: 45%;
+    height: 80%;
+
     @include respond(col) {
-      display: none;
+      width: 100%;
+      height: auto;
     }
 
     &--1 {
       background-image: url('../img/plane3.jpg');
       background-position: center;
       background-size: cover;
-      width: 45%;
-      height: 80%;
       align-self: center;
       animation: fadeIn 0.2s ease-in 0.7s forwards;
     }
@@ -243,28 +245,24 @@
       background-image: url('../img/plane-1-lg.png');
       background-position: center;
       background-size: cover;
-      width: 45%;
-      height: 75%;
       align-self: center;
     }
     &--4 {
       background-image: url('../img/plane-engine.jpeg');
       background-position: center;
       background-size: cover;
-      width: 45%;
-      height: 75%;
       align-self: center;
-
-      @media screen and (max-width: 900px) {
-        display: none;
-      }
     }
     &--5 {
       background-image: url('../img/workers2.jpg');
       background-position: center;
       background-size: cover;
-      width: 45%;
-      height: 85%;
+      align-self: center;
+    }
+    &--6 {
+      background-image: url('../img/hanger.jpeg');
+      background-position: center;
+      background-size: cover;
       align-self: center;
     }
   }
