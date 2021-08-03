@@ -31,16 +31,11 @@
   height: auto;
   min-height: 100%;
 
-  // @include respond(laptop2) {
-  //   width: 80%;
-  //   margin-bottom: 2.5rem;
-  // }
   @media screen and (max-width: 645px) {
     width: 85%;
   }
 
   &__img {
-    // width: 45%;
     height: auto;
     max-height: 11rem;
     background-color: $mid-blue;
@@ -81,7 +76,7 @@
 
     &__text {
       height: auto;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       @include respond(laptop2) {
         font-size: 1.8rem;
       }
